@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://www.taotaojs.cn">
   <title>论SQL语句中的Left join - 多表关系 | taotaojs的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Left join和From where之间有什么联系呢，一起来看看吧">
+  <meta name="description" content="无论条件是否为True，都将返回左表格式 其中如果条件为True，那么将右表数据挂载，否则右表数据设为null Join体系中，on类似于where">
 <meta name="keywords" content="SQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="论SQL语句中的Left join - 多表关系">
 <meta property="og:url" content="http://www.taotaojs.cn/2017/12/15/论SQL语句中的Left-join---多表关系/index.html">
 <meta property="og:site_name" content="taotaojs的博客">
-<meta property="og:description" content="Left join和From where之间有什么联系呢，一起来看看吧">
+<meta property="og:description" content="无论条件是否为True，都将返回左表格式 其中如果条件为True，那么将右表数据挂载，否则右表数据设为null Join体系中，on类似于where">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-17T12:12:32.062Z">
+<meta property="og:updated_time" content="2019-02-17T12:19:27.420Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="论SQL语句中的Left join - 多表关系">
-<meta name="twitter:description" content="Left join和From where之间有什么联系呢，一起来看看吧">
+<meta name="twitter:description" content="无论条件是否为True，都将返回左表格式 其中如果条件为True，那么将右表数据挂载，否则右表数据设为null Join体系中，on类似于where">
   
     <link rel="alternative" href="/atom.xml" title="taotaojs的博客" type="application/atom+xml">
   
@@ -207,7 +207,12 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Left join和From where之间有什么联系呢，一起来看看吧<br><a id="more"></a></p>
+        <ul>
+<li>无论条件是否为True，都将返回左表格式</li>
+<li>其中如果条件为True，那么将右表数据挂载，否则右表数据设为null</li>
+<li>Join体系中，on类似于where</li>
+</ul>
+<a id="more"></a>
 <p>以前，被子查询这种语句弄得超迷糊，然后在交大的学习平台上发现原来很多情况都不需要子查询，直接一个where就搞定了，但是并不了解哪些对应关系。</p>
 <p>前几天在网上看到一个大神写的SQL，冒出了一个特别神奇的语法：Left join，当时懵了，这是啥？花了好长时间的研究，终于搞清楚了啥是外链接。</p>
 <p>但是啊，不知道其他初学者有没有这种感受：看网上哪些例子是非常懂的，然而自己用在项目中，思维却卡机了。无奈之下，我还是继续研究了哪位大神的源码，如下：</p>
